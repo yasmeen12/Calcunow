@@ -21,58 +21,6 @@ Major Concepts
 		Point 3 is tricky and I think he will be lecturing on it soon. There is a powerpoint on canvas about this subject. I will be familiarizing myself with it soon. For now just make all errors cout “BAD INPUT” and move on.
 		Document all your code heavily! Before every function write down what you require it to take in and what you are promising to give out. Each time you use a variable write down what you expect it to be before it is used and what it will become after (i.e. //x must be initialized. it will be 5 greater than it was.) Sorry guys it’s a project requirement. 
 
-
-
-Pseudo Code
-	Create an 8bit class
-		Declare an 8bit int
-		Creat a constructor that takes in a value
-		Write a check if over 255 function
-Write a get function
-	Store the initial value
-	Increment
-	Check if over 255
-	Return initial value
-
-Declare an array called vars of 8bit classes that is 26 long (This will act as a hash table)
-
-Make a function called setVar that takes in a stringstream (must be in order x = 10)
-	Pass the three parts of the stringstream to a char, char and int;
-	Confirm that the first char is a valid alpha the second is ‘=’ and int is vaild
-	Subtract ‘a’ from the char
-	Make a pointer to a new 8bit with int value
-	Put the pointer in char slot of the vars array
-
-Make a function called to_lower to convert a string to lowercase
-	For each char in a string 
-    if it is of type alpha
-      Lowercase it
-
-Make a function called do_math that takes in a known value and a stringstream & outputs an int
-	Enter a while loop that end when the stringstream is empty
-		Get the next entry of the stringstream (must always be a +,-,*,/,^,%)
-		Get the next entry after that (either a char or an int)
-		If a char
-			Use the char value to look in the array for a pointer to the class
-			Get the value from the class
-		Perform the given math function on the known value and the new value
-		Store the result as the known value
-	Return the known value
-
-Main
-	Enter a While Loop that ends with EOF
-		Get user input as string
-		Pass string through the to_lower function
-		Convert string to stringstream
-		Get first entry of stringstream
-		If it is “let”
-			Pass stringstream to setVar
-		If it is “quit”
-			Quit
-		Otherwise
-			Pass the first entry and the stringstream to doMath
-
-
 Milestones
 Thursday May 4th be with you
 Assign a section of the code to each person. Hear back their comments/questions on their section.
