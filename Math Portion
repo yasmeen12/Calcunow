@@ -24,20 +24,28 @@
    24 while(counter < (int) input.size()) {
 >> 25 char operand = input.at(counter).at(0);
    26 counter++;
-   27
-   28
-   29
-   30 }
-   31
-   32 char index;
-   33 int curr_val;
->> 34 index = index.get();
->> 35 index.get() = 0;
->> 36 if (index = char) {
->> 37 get.curr_val;
-   38 }
-   39 else {
->> 40     set.curr_val = new_val;
-   41
-   42
-   43 }
+ //call  get_val();
+   31 if (operand == '+') {
+>> 32     value = value + second_var;
+   33 }
+   34 if (operand == '-') {
+>> 35     value = value - second_var;
+   36 }
+   37 if (operand == '*') {
+>> 38     value = value * second_var;
+   39 }
+   40 if (operand == '/') {
+>> 41     value = value / second_var;
+   42 if (operand == '%') {
+>> 43     value = value % second_var;
+   44 }
+   45 if (operand == '^') {
+>> 46     value = value^second_var;
+   47 return value;
+   48 }
+   49
+   50
+   51 }
+   52
+   53
+   54 };
