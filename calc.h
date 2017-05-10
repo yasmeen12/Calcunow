@@ -33,7 +33,7 @@ vector<calc*> table;
 void set_value(char var, int val) {
     int temp = var - 'a';
     //Check if value already set
-    if(table.at(temp)->get_used()) throw runtime_error("Bad!");
+    if(table.at(temp)->get_used() || val < 0 || val > 255) throw runtime_error("Bad!");
     table.at(temp)->set_val(val);
 };
 
@@ -77,6 +77,8 @@ int math(vector<string> input) {
             value = value % second_var;
         }
         if (operand == '^') {
+            if(value == 0 || second_var == 0)
+                throw runtime_error("Invalid Input!");
             value = pow(value,second_var);
         }
     }
