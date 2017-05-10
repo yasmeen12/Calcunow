@@ -22,9 +22,7 @@ class calc{
         unsigned char get_val () {
             unsigned char temp = val;
             val++;
-            if (val == 0){
-                cout << "bad input from class" << endl;
-            }
+            if (val == 0) throw runtime_error("Bad!");
             return temp;
         }
 };
@@ -67,6 +65,7 @@ int math(vector<string> input) {
             value = value * second_var;
         }
         if (operand == '/') {
+            if(second_var == 0) throw runtime_error("Bad!");
             value = value / second_var;
         }
         if (operand == '%') {
