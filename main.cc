@@ -22,7 +22,11 @@ int main() {
 
 		if( calcInputs.at(1) == "=") set_value(calcInputs.at(0)[0], stoi(calcInputs.at(2)));
 
-		cout << math(calcInputs);
-
+		try {
+			cout << math(calcInputs);
+		} catch (exception &e) {
+			cout << "INVALID INPUT!"\n";
+			exit(EXIT_FAILURE);
+		}
 	}
 }
