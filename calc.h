@@ -28,10 +28,12 @@ class calc{
         }
 };
 
-vector<calc*> table(26,new calc);
+vector<calc*> table;
 
 void set_value(char var, int val) {
     int temp = var - 'a';
+    //Check if value already set
+    if(table.at(temp)->get_used()) throw runtime_error("Bad!");
     table.at(temp)->set_val(val);
 };
 
@@ -40,6 +42,8 @@ unsigned char get_val(string value) {
         return stoi(value);
     } else {
         unsigned char placeHolder = value[0]- 'a';
+        //check if value has not been set
+        if(!table.at(placeHolder)->get_used()) throw runtime_error("Bad!");
         return table.at(placeHolder)->get_val();
     }
 };
