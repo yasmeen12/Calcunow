@@ -79,7 +79,7 @@ int math(vector<string> input) {
         if (operand == '^') {
             if(value == 0 || second_var == 0)
                 throw runtime_error("Invalid Input!");
-            value = pow(value,second_var);
+            else value = pow(value,second_var);
         }
     }
     return value;
