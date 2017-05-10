@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <cmath>
 using namespace std;
 
 class calc{
@@ -38,7 +39,7 @@ unsigned char get_val(string value) {
     if(isdigit(value[0])) {
         return stoi(value);
     } else {
-        unsigned char placeHolder = value[0];
+        unsigned char placeHolder = value[0]- 'a';
         return table.at(placeHolder)->get_val();
     }
 };
@@ -54,7 +55,7 @@ int math(vector<string> input) {
         unsigned char second_var = get_val(input.at(counter));
 
         counter++;
-        
+
         if (operand == '+') {
             value = value + second_var;
         }
@@ -72,7 +73,7 @@ int math(vector<string> input) {
             value = value % second_var;
         }
         if (operand == '^') {
-            value = value^second_var;
+            value = pow(value,second_var);
         }
     }
     return value;
