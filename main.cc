@@ -32,18 +32,20 @@ int main() {
         //Functions in calc.h can throw runtime errors, use try-catch block to handle errors - Robert
         try {
             //Extra Credit: Looping
+           //a for loop looping for as many times as 'looping' is set to - Yasmeen
             if(looping > 0) { 
                 for (int i = 0; i < looping; i++) {
-                    cout << math(calcInputs) << endl;   
-                //a for loop  outputting the calcInputs for as many times as 'looping' is set to - Yasmeen
+                    cout << math(calcInputs) << endl;                       
+                    //it will output the user's input until the for loop ends - Yasmeen
                 }
                 looping = 0;
             }
             //Handle User inputs
             else if( calcInputs.at(0) == "LET") set_value(calcInputs.at(1)[0], stoi(calcInputs.at(3)));
             else if(calcInputs.at(0) == "QUIT" || calcInputs.at(0) == "quit") break;
+            //checks to see if the input has "LOOP" in it - Yasmeen
             else if(calcInputs.at(0) == "LOOP") looping = stoi( calcInputs.at(1));
-            //changes the calcInputs into an int and sets it to looping - Yasmeen
+            //if the user typed in "LOOP", the next spot will be converted into an int and have looping set to it - Yasmeen
             else cout <<  math(calcInputs) << endl;
         } catch (exception &e) {
             //Handle thrown runtime errors - Robert   
