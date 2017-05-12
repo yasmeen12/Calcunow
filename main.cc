@@ -35,6 +35,7 @@ int main() {
             if(looping > 0) { 
                 for (int i = 0; i < looping; i++) {
                     cout << math(calcInputs) << endl;   
+                //a for loop  outputting the calcInputs for as many times as 'looping' is set to
                 }
                 looping = 0;
             }
@@ -42,6 +43,7 @@ int main() {
             else if( calcInputs.at(0) == "LET") set_value(calcInputs.at(1)[0], stoi(calcInputs.at(3)));
             else if(calcInputs.at(0) == "QUIT" || calcInputs.at(0) == "quit") break;
             else if(calcInputs.at(0) == "LOOP") looping = stoi( calcInputs.at(1));
+            //changes the calcInputs into an int and sets it to looping 
             else cout <<  math(calcInputs) << endl;
         } catch (exception &e) {
             //Handle thrown runtime errors - Robert   
